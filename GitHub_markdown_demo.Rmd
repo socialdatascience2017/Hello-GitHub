@@ -1,0 +1,22 @@
+---
+title: "A toy example to show how we generate markdown file form Rmarkdown and share it on GitHub"
+author: "Social Data Science 2017"
+date: "10-05-2017"
+output: rmarkdown::github_document
+---
+
+##. Code Reference http://www.r-tutor.com/elementary-statistics/quantitative-data/scatter-plot
+
+```{r}
+duration = faithful$eruptions      # the eruption durations 
+waiting = faithful$waiting         # the waiting interval 
+head(cbind(duration, waiting)) 
+
+duration = faithful$eruptions      # the eruption durations 
+waiting = faithful$waiting         # the waiting interval 
+plot(duration, waiting,            # plot the variables 
+  xlab="Eruption duration",        # x−axis label 
+  ylab="Time waited")              # y−axis label
+
+abline(lm(waiting ~ duration))     # add a line to show lm fitting result
+```
